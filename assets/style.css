@@ -1,0 +1,113 @@
+*{
+margin: 0;
+padding: 0;
+}
+.fondo{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-template-rows: 100px 800px   200px  ;
+grid-template-areas:"nav  nav  nav "
+                    "cont cont cont "                    
+                    "pp   pp   pp  "
+;   
+gap: 10px;
+background-image: url(./img/fondoestrellas.jpg);
+}
+.navegador{
+    background-color: aqua;
+    grid-area: nav;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+}
+.navegador ul{
+width: 800px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+list-style: none;
+}
+.navegador ul li{
+display: inline-block;
+color: white;
+text-decoration: none;
+}
+.contenido{
+grid-area: cont;
+display: flex;
+color: blue;
+background-color: brown;
+width: 100%;
+grid-column-start: 1;
+grid-column-end: 4;
+}
+.contenido .pimg{
+display: flex;
+justify-items: end;
+}
+.pie-de-página{
+display: flex;
+background-color: chartreuse;
+grid-area: pp;
+grid-column-start: 1;
+grid-column-end: 4;
+width: 100%;
+}
+.pie-de-página .textopiep{
+display: inline-block;
+}
+.pie-de-página .redesicons{
+display: inline-block;
+justify-items: end;
+}
+.fondogaleria{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-template-rows: 100px auto   300px  ;
+grid-template-areas:"nav  nav  nav "
+                    "contg contg contg "                    
+                    "pp   pp   pp   "
+;   
+gap: 10px;
+background-image: url(./img/fondoestrellas.jpg);
+}
+.contenidog{
+    grid-area: contg;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    color: blue;
+    background-color: brown;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    }
+@media(min-width:480px){   
+.contenidog{
+overflow:scroll;
+width: 100%;
+display: block;
+}
+.pie-de-página{
+    overflow:none;
+    width: 100%;
+    display: column;
+}
+.contenido{
+    width: 100%;
+    display: block;
+    overflow: scroll;
+}
+.navegador{
+    background-color: aqua;
+    grid-area: nav;
+    align-content: center;
+    justify-content: center;
+    display: column;
+}    
+.navegador ul li{
+    display:block;
+    color: white;
+    text-decoration: none;
+}
+}
