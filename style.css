@@ -1,0 +1,8 @@
+.navegador{
+    background-color: aqua;
+    grid-area: nav;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    background-image:linear-gradient(yellow,red);
+}
