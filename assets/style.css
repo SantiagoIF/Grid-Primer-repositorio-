@@ -19,6 +19,7 @@ background-image: url(./img/fondoestrellas.jpg);
     align-content: center;
     justify-content: center;
     display: flex;  
+    background-image: linear-gradient(yellow,red);
 }
 .navegador ul{
 width: 800px;
@@ -45,6 +46,20 @@ grid-column-end: 4;
 display: flex;
 justify-items: end;
 }
+.contenido .pimg .pimgi1{
+transform: rotate(80deg);
+}
+.contenido .pimg .pimgi2{
+transform: skewY(45deg);
+}
+.contenido .ptexto .ptextoboton{
+height: 100px;
+transition:height 2s;
+}
+.contenido .ptexto .ptextoboton:hover{
+height: 300px;
+}
+
 .pie-de-página{
 display: flex;
 background-color: chartreuse;
